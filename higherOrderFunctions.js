@@ -67,3 +67,19 @@ function contains(collection, target) {
   }, false);
 }
 
+function indexOf(collection, value, fromIndex) {
+  var result = -1;
+  var position = fromIndex -1 || 0;
+  fromIndex = fromIndex || 0;
+  each(collection, function(element) {
+    if ((element === target) && (result === -1) && (position >= fromIndex)) {
+        result = position;
+    }
+    position++;
+  });
+  return result;
+}
+
+function defaults(collection, object) {
+
+}

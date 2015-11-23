@@ -80,6 +80,20 @@ function indexOf(collection, value, fromIndex) {
   return result;
 }
 
-function defaults(collection, object) {
+Object.prototype.getKey = function(value){
+  for(var key in this) {
+     if(this[key] == value) {
+      return key;
+     }
+  } return null;
+};
 
+
+function defaults(collection, object) {
+  each(object, function(element) {
+    if (collection.getKey(element) !== null) {
+      collection[key] = object[element];
+    } 
+  });
+  return collection;
 }

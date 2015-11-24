@@ -52,7 +52,7 @@ function every(collection, callback) {
 function reduce(collection, callback, initial) {
   var accumulator = initial;
   each(collection, function(element) {
-    if (accumulator == undefined) {
+    if (accumulator === undefined) {
       accumulator = element;
     } else {
       accumulator = callback(accumulator, element);
@@ -85,15 +85,18 @@ Object.prototype.getKey = function(value){
      if(this[key] == value) {
       return key;
      }
-  } return null;
+  }
+ return null;
 };
 
 
 function defaults(collection, object) {
   each(object, function(element) {
-    if (collection.getKey(element) !== null) {
+    var key = collection.getKey(element);
+    if (key !== null) {
+
       collection[key] = object[element];
-    } 
+    }
   });
   return collection;
 }

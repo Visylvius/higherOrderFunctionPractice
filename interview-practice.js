@@ -51,12 +51,10 @@ filter(letters, function(letter) {
   return ['l', 'm', 'n', 'o', 'p'].indexOf(letter) !== -1;
 }).join(''); // HINT: more code here
 
-//use reduce and filter to add up all even numbers;
+// Return the sum of the even numbers using filter and reduce together
 reduce(filter(numbers, function(number) {
   return number % 2 === 0;
 }), function(sum, number) {
   return sum + number;
 });
-
-// Return the sum of the even numbers using filter and reduce together
 // NO HINTS: All of your code here

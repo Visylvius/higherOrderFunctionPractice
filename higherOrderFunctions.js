@@ -80,14 +80,14 @@ function indexOf(collection, value, fromIndex) {
   return result;
 }
 
-Object.prototype.getKey = function(value){
-  for(var key in this) {
-     if(this[key] == value) {
-      return key;
-     }
-  }
- return null;
-};
+// Object.prototype.getKey = function(value){
+//   for(var key in this) {
+//      if(this[key] == value) {
+//       return key;
+//      }
+//   }
+//  return null;
+// };
 
 
 function defaults(collection, object) {

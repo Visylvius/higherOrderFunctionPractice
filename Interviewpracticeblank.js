@@ -21,7 +21,6 @@ var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 // Use reduce to return the sum of numbers
 
 
-
 // Use map to convert the array letters to all capital letters
 
 
@@ -31,7 +30,6 @@ var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 
 
 // Modify the above function to return the other letters
-
 
 
 // Use filter to return the string "lmnop" from letters

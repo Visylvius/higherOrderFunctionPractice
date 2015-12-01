@@ -1,6 +1,11 @@
 //roman numerals
 //Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1,000
 // I can be subtracted from V and X, L can be subtracted from C, and D. C can be subtracted by D and M
+function contains(collection, target) {
+  return reduce(collection, function(accumulator, element) {
+    return accumulator || element === target;
+  }, false);
+}
 function romanNumeralValue(str) {
   var subtractive = false;
   str = str.toUpperCase().split('');
@@ -38,7 +43,7 @@ function wordCount(paragraph,name){
     var paragraphLetters = paragraph.toUpperCase().split('');
     var nameLetters = name.toUpperCase().split('');
     var count = {};
-    
+
     for (var i = 0; i < nameLetters.length; i++){
         count[nameLetters[i]] = 0;
     }

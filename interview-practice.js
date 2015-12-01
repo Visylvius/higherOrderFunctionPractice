@@ -12,6 +12,25 @@ filter(letters, function(letter) {
   return ['a', 'e', 'i', 'o', 'u'].indexOf(letter) !== -1;
 });
 
+function some(collection, callback) {
+  var result = false;
+  each(collection, function(element) {
+    if (callback(element)) {
+      result = true;
+    }
+  });
+  return result;
+}
+
+function every(collection, callback) {
+  var result = true;
+  each(collection, function(element) {
+    if(!callback(element)) {
+      result = false; 
+    }
+  });
+  return result;
+}
 
 // Use each to print the odd numbers to the console
 each(numbers, function(number) {

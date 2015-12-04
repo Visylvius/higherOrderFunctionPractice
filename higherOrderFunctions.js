@@ -1,16 +1,15 @@
-
-function each(collection, callback) {
-  if (Array.isArray(collection)) {
-    for (var i = 0; i < collection.length; i++) {
-      callback(collection[i]);
-    }
-  } else {
-    for (var prop in collection) {
-      callback(collection[prop]);
-    }
-  }
-}
-
+_.each = function(collection, iterator) {
+      if(Array.isArray(collection)) {
+        for (var i = 0; i < collection.length; i++) {
+          iterator(collection[i], i, collection);
+        }
+      } else {
+        for (var key in collection) {
+          iterator(collection[key], key, collection);
+        }
+      }
+  };
+  
 function map(collection, callback) {
   var result = [];
   each(collection, function(element) {
@@ -100,3 +99,13 @@ function defaults(collection, object) {
   });
   return collection;
 }
+
+_.uniq = function(array) {
+    var result = [];
+    _.each(array, function(element, index) {
+      if (_.indexOf(result, element) === -1 && element !== '') {
+        result.push(element);
+      }
+    });
+    return result;
+  };

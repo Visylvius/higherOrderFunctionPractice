@@ -9,7 +9,7 @@ _.each = function(collection, iterator) {
         }
       }
   };
-  
+
 function map(collection, callback) {
   var result = [];
   each(collection, function(element) {
@@ -107,5 +107,20 @@ _.uniq = function(array) {
         result.push(element);
       }
     });
+    return result;
+  };
+
+  _.indexOf = function(array, target){
+    // TIP: Here's an example of a function that needs to iterate, which we've
+    // implemented for you. Instead of using a standard `for` loop, though,
+    // it uses the iteration helper `each`, which you will need to write.
+    var result = -1;
+
+    _.each(array, function(item, index) {
+      if (item === target && result === -1) {
+        result = index;
+      }
+    });
+
     return result;
   };

@@ -9,6 +9,7 @@ _.each = function(collection, iterator) {
         }
       }
   };
+  
 
 function map(collection, callback) {
   var result = [];

@@ -9,13 +9,14 @@ _.each = function(collection, iterator) {
         }
       }
   };
-  
+
 
 function map(collection, callback) {
   var result = [];
   each(collection, function(element) {
     result.push(callback(element));
   });
+  
   return result;
 }
 

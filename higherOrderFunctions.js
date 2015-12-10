@@ -16,6 +16,7 @@ function map(collection, callback) {
   each(collection, function(element) {
     result.push(callback(element));
   });
+
   
   return result;
 }

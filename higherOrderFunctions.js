@@ -17,7 +17,7 @@ function map(collection, callback) {
     result.push(callback(element));
   });
 
-  
+
   return result;
 }
 

@@ -169,3 +169,13 @@ _.uniq = function(array) {
       return result;
     };
   };
+  _.shuffle = function(array) {
+      array = array.slice(0);
+      for (var i = 0; i < array.length; i++) {
+        var random = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[random];
+        array[random] = temp;
+      }
+      return array;
+    };

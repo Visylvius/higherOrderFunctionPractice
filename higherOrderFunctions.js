@@ -105,11 +105,16 @@ function defaults(collection, object) {
 
 _.uniq = function(array) {
     var result = [];
-    _.each(array, function(element, index) {
-      if (_.indexOf(result, element) === -1 && element !== '') {
-        result.push(element);
+    // _.each(array, function(element, index) {
+    //   if (_.indexOf(result, element) === -1 && element !== '') {
+    //     result.push(element);
+    //   }
+    // });
+    for (var i = 0; i < array.length; i++) {
+      if (results.indexOf(array[i]) < 0) {
+        results.push(array[i]);
       }
-    });
+    }
     return result;
   };
 

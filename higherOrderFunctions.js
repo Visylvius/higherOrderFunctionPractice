@@ -179,28 +179,20 @@ _.uniq = function(array) {
       }
       return array;
     };
-    //working on memorize;
     _.memoize = function(func) {
     var result = {};
-    var cache;
     return function(arg) {
-
-      // var newArgument = result[arg];
+      var holder = JSON.stringify(arguments);
+      if (result[holder] === undefined) {
+        result[holder] = func.apply(this, arguments);
       // newArgument = result[arguments];
-      if (result[arguments] !== cache) {
-        cache = result[arguments];
-
-        // console.log('this is callback function' + func);
-        // console.log('this' + this);
-        // console.log('this result[arg]' + result[arg]);
-        // console.log(arg);
-
-        result[arguments] = func.apply(this, arguments);
-        console.log(result[arguments]);
+      // console.log('this is callback function' + func);
+      // console.log('this' + this);
+      // console.log('this result[arg]' + result[arg]);
+      // console.log(arg);
+      console.log(result[arguments]);
       }
-      // console.log(result);
-      // console.log(arguments);
-      // console.log('this is teh best' + result[arguments]);
-      return result[arguments];
+
+      return result[holder];
     };
   };

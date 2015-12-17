@@ -181,7 +181,7 @@ _.uniq = function(array) {
     };
     _.memoize = function(func) {
     var result = {};
-    return function(arg) {
+    return function() {
       var holder = JSON.stringify(arguments);
       if (result[holder] === undefined) {
         result[holder] = func.apply(this, arguments);

@@ -201,3 +201,9 @@ _.uniq = function(array) {
       return result[holder];
     };
   };
+
+  _.delay = function(func, wait) {
+      return setTimeout(function() {
+        return func.apply(func, arguments);
+      }, wait);
+    };

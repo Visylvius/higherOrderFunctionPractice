@@ -6,16 +6,7 @@ var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 
 
 // Practice Problems:
-function indexOf(array, target) {
-  var result = -1;
-  each(array, function(item, index) {
-    if (item === target && result === -1) {
-      result = index;
-    }
-  });
-  return result;
-}
-indexOf([1,2,3,4,5], 2);
+
 
 
 //-------------------

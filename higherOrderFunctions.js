@@ -203,7 +203,8 @@ _.uniq = function(array) {
   };
 
   _.delay = function(func, wait) {
+      var argumentsArray = Array.prototype.slice.call(arguments);
       return setTimeout(function() {
-        return func.apply(func, arguments);
+        return func.apply(func, argumentsArray.slice(2));
       }, wait);
     };

@@ -208,3 +208,15 @@ _.uniq = function(array) {
         return func.apply(func, argumentsArray.slice(2));
       }, wait);
     };
+
+    // seperate solution
+
+  // _.delay = function(func, wait) {
+  //   var argumentsArray = [];
+  //   for (var i = 2; i < arguments.length; i++) {
+  //     argumentsArray[i - 2] = arguments[i];
+  //   }
+  //   return setTimeout(function() {
+  //     return func.apply(func, argumentsArray);
+  //   }, wait);
+  // };

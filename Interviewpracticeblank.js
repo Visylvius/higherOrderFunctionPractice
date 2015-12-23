@@ -6,9 +6,25 @@ var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 
 
 // Practice Problems:
+function each(collection, callback) {
 
+}
 
+function map(collection, callback) {
 
+}
+
+function filter(collection, callback) {
+
+}
+
+function reduce(collection, callback, initial) {
+
+}
+
+function contains(collection, target) {
+
+}
 //-------------------
 // Use the higherOrderFunctions to solve the following problems:
 

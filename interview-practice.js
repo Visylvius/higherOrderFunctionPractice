@@ -9,9 +9,24 @@ var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 //-------------------
 // Use the higherOrderFunctions to solve the following problems:
 function each(collection, iterator) {
-      
-  }
+  
+}
 
+function map(collection, callback) {
+
+}
+
+function filter(collection, callback) {
+
+}
+
+function reduce(collection, callback, inital) {
+
+}
+
+function contains(collection, target) {
+
+}
 function indexOf(array, target){
     // TIP: Here's an example of a function that needs to iterate, which we've
     // implemented for you. Instead of using a standard `for` loop, though,

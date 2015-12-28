@@ -3,11 +3,41 @@ var numbers = [1,2,3,4,5,6,7,8,9,10];
 var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
                'o','p','q','r','s','t','u','v','w','x','y','z'];
 
-               
+
 
 // Practice Problems:
 //-------------------
 // Use the higherOrderFunctions to solve the following problems:
+function each(collection, iterator) {
+      
+  }
+
+function indexOf(array, target){
+    // TIP: Here's an example of a function that needs to iterate, which we've
+    // implemented for you. Instead of using a standard `for` loop, though,
+    // it uses the iteration helper `each`, which you will need to write.
+
+}
+
+function uniq(array) {
+
+}
+
+function extend(obj) {
+
+}
+
+function defaults(obj) {
+
+}
+
+function first(array, n) {
+
+}
+
+function last(array, n) {
+
+}
 
 // Use filter to return just the vowels from the array letters
 filter(letters, function(letter) {

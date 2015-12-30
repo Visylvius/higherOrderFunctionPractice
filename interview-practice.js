@@ -8,24 +8,53 @@ var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 // Practice Problems:
 //-------------------
 // Use the higherOrderFunctions to solve the following problems:
-function each(collection, iterator) {
-  
+function each(collection, callback) {
+  if (Array.isArray(collection)) {
+    for (var i = 0; i < collection.length; ) {
+      callback(collection[i]);
+    }
+  } else if(typeof collection === 'object') {
+    for (var key in collection) {
+      callback(collection[key]);
+    }
+  }
 }
 
 function map(collection, callback) {
-
+  var result = [];
+  each(collection, function(element) {
+    result.push(callback(element));
+  });
+  return result;
 }
 
 function filter(collection, callback) {
-
+  var result = [];
+  each(collection, function(element) {
+    if (!callback(element)) {
+      result.push(element);
+    }
+  });
+  return result;
 }
 
 function reduce(collection, callback, inital) {
+  var accumulator = initial;
+  each(collection, function(element) {
+    if (accumulator === undefined) {
+        accumulator = element;
+    } else {
+      accumulator = callback(accumulator, element);
+    }
+  });
 
+  return accumulator;
 }
 
 function contains(collection, target) {
-
+  return reduce(collection, function(accumulator, element) {
+    return accumulator || element === target;
+  }, false);
 }
 function indexOf(array, target){
     // TIP: Here's an example of a function that needs to iterate, which we've

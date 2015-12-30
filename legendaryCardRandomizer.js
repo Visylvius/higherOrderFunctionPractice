@@ -36,8 +36,25 @@ function chooseHeroes(array) {
   return array;
 }
 
+function chooseMastermind(array) {
+  array = shuffle(array);
+  for (var i = 0; i < 1; i++) {
+    $('.mastermindList').append('<li>' + array[i] + '</li>');
+  }
+  return array;
+}
+
+function chooseScheme(array) {
+  
+  return array;
+}
+
 $('.heroes').on('click', function() {
   chooseOption(chooseHeroes(heroesArray));
 });
+$('.mastermind').on('click', function() {
+  chooseMastermind(mastermindArray);
+});
+// $('')
 
 });

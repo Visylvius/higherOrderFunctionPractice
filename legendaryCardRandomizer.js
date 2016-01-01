@@ -12,7 +12,18 @@ var schemeArray = ['capture baby hope', 'detonate helicarrier', 'massive earthqu
                   'Replace Earth\'s Leaders with Killbots', 'Secret Invasion of the Skrull Shapeshifters',
                   'Super Hero Civil War', 'Unleash the Power of the Cosmic Cube'];
 
-var heroesList = document.getElementsByClassName('heroList');
+
+function init() {
+  $('.heroes').on('click', function() {
+    chooseOption(chooseHeroes(heroesArray));
+  });
+  $('.mastermind').on('click', function() {
+    chooseMastermind(mastermindArray);
+  });
+  $('.scheme').on('click', function() {
+    chooseScheme(schemeArray);
+  });
+}
 
 function shuffle(array) {
   for (var i = 0; i < array.length; i++) {
@@ -52,15 +63,7 @@ function chooseScheme(array) {
   return array;
 }
 
-$('.heroes').on('click', function() {
-  chooseOption(chooseHeroes(heroesArray));
-});
-$('.mastermind').on('click', function() {
-  chooseMastermind(mastermindArray);
-});
-$('.scheme').on('click', function() {
-  chooseScheme(schemeArray);
-});
+init();
 
 
 });

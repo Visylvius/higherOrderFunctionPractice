@@ -25,6 +25,30 @@ function reduce(collection, callback, initial) {
 function contains(collection, target) {
 
 }
+
+function indexOf(array, target){
+
+}
+
+function uniq(array) {
+
+}
+
+function extend(obj) {
+
+}
+
+function defaults(obj) {
+
+}
+
+function first(array, n) {
+
+}
+
+function last(array, n) {
+
+}
 //-------------------
 // Use the higherOrderFunctions to solve the following problems:
 

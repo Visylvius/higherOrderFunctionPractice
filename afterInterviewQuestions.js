@@ -48,3 +48,16 @@ function each (collection, callback) {
   var theArray = [1,2,1,1,5,4,3,3,2,6];
   // returns an object with the key value pairs of how many times the number was in the array
   // {1: 3, 2: 1, 3: 2, 5: 1, 6: 1}
+
+// sort the array in order
+  function sort(arr) {
+
+  }
+
+var arr = [8,5,9];
+//use reduce
+function something(collection, iterator) {
+  return reduce(collection, function(startVal, element) {
+    return startVal < element ? startVal : element;
+  });
+}

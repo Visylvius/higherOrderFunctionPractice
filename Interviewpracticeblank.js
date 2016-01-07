@@ -7,18 +7,45 @@ var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
 
 // Practice Problems:
 function each(collection, callback) {
-
+  if (Array.isArray(collection)) {
+    for (var i = 0; i < collection.length; i++) {
+      callback(collection[i]);
+    }
+  } else if (typeof collection === 'object') {
+    for (var key in collection) {
+      callback(collection[key]);
+    }
+  }
 
 }
 
 function map(collection, callback) {
-
+  var result = [];
+  each(collection, function(element) {
+    result.push(callback(element));
+  });
+  return result;
 }
 
 function filter(collection, callback) {
-
+  var result = [];
+  each(collection, function(element) {
+    if (callback(element)) {
+      result.push(element);
+    }
+  });
+  return result;
 }
 
+function reject(collection, callback) {
+  var result = [];
+  each(collection, function(element) {
+    if (!callback(element)) {
+      result.push(element);
+    }
+  });
+  return result;
+}
 function reduce(collection, callback, initial) {
 
 }

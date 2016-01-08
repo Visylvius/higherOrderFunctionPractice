@@ -220,3 +220,22 @@ _.uniq = function(array) {
   //     return func.apply(func, argumentsArray);
   //   }, wait);
   // };
+
+
+  var getElementsByClassName = function(className) {
+    var result = [];
+    var iteratingFunction = function(node) {
+      console.log(node.children);
+      if (_.contains(node.classList, className)) {
+        result.push(node);
+      }
+      if (node.children.length > 0) {
+        _.each(node.children, function(nodeChild) {
+            iteratingFunction(nodeChild);
+        });
+      }
+    };
+    iteratingFunction(document.body);
+    console.log(result);
+    return result;
+  };
